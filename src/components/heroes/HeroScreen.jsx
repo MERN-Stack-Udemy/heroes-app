@@ -23,13 +23,13 @@ export const HeroScreen = ({history}) => {
                     <img 
                         src={`../assets/heroes/${ heroId }.jpg`} 
                         alt={superhero}
-                        className="img-thumbnail"
+                        className="img-thumbnail animate__animated animate__bounceInLeft"
                     />
                 </div>
 
                 <div className="col-8">
                     <h3>{superhero}</h3>
-                    <ul className="list-group list-group-flush">
+                    <ul className="list-group list-group-flush animate__animated animate__bounceInUp">
                         <li className="list-group-item"> <strong>Alter ego:</strong> {alter_ego}</li>
                         <li className="list-group-item"> <strong>Publisher:</strong> {publisher}</li>
                         <li className="list-group-item"> <strong>Fist appearance:</strong> {first_appearance}</li>
@@ -40,7 +40,7 @@ export const HeroScreen = ({history}) => {
                     </ul>
 
                     <button
-                        className="btn btn-outline-info"
+                        className="btn btn-outline-info animate__animated animate__fadeInUpBig"
                         onClick={ handleReturn }
                     >
                         Return
