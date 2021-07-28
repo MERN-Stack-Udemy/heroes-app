@@ -5,15 +5,15 @@ import { types } from '../../types/types';
 export const LoginScreen = ({ history }) => {
 
     const { dispatch } = useContext(AuthContext);
-    const handleClick = () => {
-        // history.push('/');
+    const handleLogin = () => {
+        const lastPath = localStorage.getItem('lastPath') || '/';
         dispatch({
             type: types.login,
             payload:{
                 name: 'smog'
             }
         });
-        history.replace('/')
+        history.replace(lastPath)
     }
 
     return (
@@ -22,7 +22,7 @@ export const LoginScreen = ({ history }) => {
             <hr />
             <button
                 className="btn btn-primary"
-                onClick={handleClick}
+                onClick={handleLogin}
             >Login
             </button>
         </div>
