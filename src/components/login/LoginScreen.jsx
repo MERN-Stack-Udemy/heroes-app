@@ -10,11 +10,10 @@ export const LoginScreen = ({ history }) => {
         dispatch({
             type: types.login,
             payload:{
-                user: 'smog'
+                name: 'smog'
             }
         });
-
-        // history.replace('/')
+        history.replace('/')
     }
 
     return (
